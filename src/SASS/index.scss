@@ -1,0 +1,94 @@
+@import "./config";
+
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "h1 logo" "p logo";
+  background: $Soft-red;
+  border-radius: 10px;
+  padding: 1rem;
+  place-items: center;
+  gap: 0.2rem 9rem;
+  color: $Very-pale-orange;
+
+  h2 {
+    grid-area: h1;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  p {
+    grid-area: p;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  img {
+    grid-area: logo;
+  }
+}
+
+main {
+  background: $Very-pale-orange;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 0.5rem;
+
+  hr {
+    margin: 1rem 0;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $Dark-brown;
+    padding: 0.5rem;
+  }
+}
+
+.tool-tip {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: $Dark-brown;
+  width: 5rem;
+  p {
+    padding: 0.2rem;
+    text-align: center;
+    color: $Very-pale-orange;
+  }
+}
+
+.expenses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "h2 p" "amount p";
+  padding: 1rem;
+
+  h3 {
+    color: $Dark-brown;
+    grid-area: h2;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $Medium-brown;
+  }
+
+  .expense-amount {
+    grid-area: amount;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  p {
+    grid-area: p;
+    text-align: end;
+    color: $Medium-brown;
+    font-size: 0.9rem;
+    align-self: center;
+    span {
+      display: block;
+      font-weight: 700;
+      color: $Dark-brown;
+    }
+  }
+}
